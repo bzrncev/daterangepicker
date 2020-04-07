@@ -1136,10 +1136,9 @@
         hide: function(e) {
             if (!this.isShowing) return;
 
-            //incomplete date selection, revert to last values
+            // if clicked once, clone start day and make it end of the day
             if (!this.endDate) {
-                this.startDate = this.oldStartDate.clone();
-                this.endDate = this.oldEndDate.clone();
+                this.endDate = this.startDate.clone().endOf("day");
             }
 
             //if a new date range was selected, invoke the user callback function
