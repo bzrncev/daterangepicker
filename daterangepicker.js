@@ -371,8 +371,8 @@
         }
 
         //can't be used together for now
-        if (this.timePicker && this.autoApply)
-            this.autoApply = false;
+        // if (this.timePicker && this.autoApply)
+        //     this.autoApply = false;
 
         if (this.autoApply) {
             this.container.addClass('auto-apply');
